@@ -28,7 +28,7 @@ export class EnclosureWebSocket {
     }
     this.wsInstance.onopen = () => this.onOpen();
     this.wsInstance.onmessage = (res: MessageEvent) => this.onMessage(res);
-    this.wsInstance.onclose = (e: CloseEvent) => this.onClose(e);
+    this.wsInstance.onclose = () => this.onClose();
   }
 
   private onOpen() {
