@@ -1,13 +1,23 @@
 {
-  "name": "vue-utils",
-  "version": "0.1.0",
-  "private": true,
+  "name": "pang-utils",
+  "version": "1.0.3",
+  "description": "vue项目常用函数库",
+  "author": "panglehaoya",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build:lib": "tsup",
+    "cz": "npm run log && git add . && git cz",
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs",
+    "log": "conventional-changelog --config ./node_modules/vue-cli-plugin-commitlint/lib/log -i CHANGELOG.md -s -r 0"
   },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
@@ -29,15 +39,39 @@
     "@vue/test-utils": "^2.0.0-0",
     "@vue/vue3-jest": "^27.0.0-alpha.1",
     "babel-jest": "^27.0.6",
+    "commitizen": "^4.0.3",
+    "commitlint": "^8.2.0",
+    "conventional-changelog-cli": "^2.0.28",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
+    "husky": "^3.0.9",
     "jest": "^27.0.5",
     "prettier": "^2.4.1",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
     "ts-jest": "^27.0.4",
-    "typescript": "~4.5.5"
-  }
+    "tsup": "^6.4.0",
+    "typescript": "~4.5.5",
+    "vue-cli-plugin-commitlint": "~1.0.12",
+    "vuepress": "^2.0.0-beta.53"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/vue-cli-plugin-commitlint/lib/cz"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panglehaoya/enclosure-websocket"
+  },
+  "type": "module",
+  "types": "dist/index.d.ts"
 }
