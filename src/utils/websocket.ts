@@ -46,7 +46,7 @@ export class EnclosureWebSocket {
     }
   }
 
-  private onClose(e: CloseEvent) {
+  private onClose() {
     if (this.isActiveClose) return;
     clearInterval(this.heartbeatTimer);
     delete this.wsInstance;
