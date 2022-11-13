@@ -6,7 +6,7 @@ export type EventHandlerMap<Events extends Record<EventType, unknown>> = Map<
   Array<Handler>
 >;
 
-export class WSEvent {
+export class Event {
   private all: EventHandlerMap<Record<EventType, unknown>> = new Map();
 
   on(type: EventType, handler: Handler) {
