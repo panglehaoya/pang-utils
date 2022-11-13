@@ -1,15 +1,16 @@
 export const data = {
-  key: "v-3706649a",
-  path: "/404.html",
-  title: "",
+  key: "v-9655bafa",
+  path: "/views/Hooks.html",
+  title: "Hooks",
   lang: "en-US",
-  frontmatter: {
-    layout: "404",
-  },
+  frontmatter: {},
   excerpt: "",
   headers: [],
-  git: {},
-  filePathRelative: null,
+  git: {
+    updatedTime: null,
+    contributors: [],
+  },
+  filePathRelative: "views/Hooks.md",
 };
 
 if (import.meta.webpackHot) {

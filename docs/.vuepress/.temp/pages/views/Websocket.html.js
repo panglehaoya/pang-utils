@@ -1,15 +1,16 @@
 export const data = {
-  key: "v-3706649a",
-  path: "/404.html",
-  title: "",
+  key: "v-5e8f6fcc",
+  path: "/views/Websocket.html",
+  title: "Websocket",
   lang: "en-US",
-  frontmatter: {
-    layout: "404",
-  },
+  frontmatter: {},
   excerpt: "",
   headers: [],
-  git: {},
-  filePathRelative: null,
+  git: {
+    updatedTime: null,
+    contributors: [],
+  },
+  filePathRelative: "views/Websocket.md",
 };
 
 if (import.meta.webpackHot) {

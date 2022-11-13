@@ -1,15 +1,16 @@
 export const data = {
-  key: "v-3706649a",
-  path: "/404.html",
-  title: "",
+  key: "v-89f8c5a2",
+  path: "/views/WaterMark.html",
+  title: "水印",
   lang: "en-US",
-  frontmatter: {
-    layout: "404",
-  },
+  frontmatter: {},
   excerpt: "",
   headers: [],
-  git: {},
-  filePathRelative: null,
+  git: {
+    updatedTime: null,
+    contributors: [],
+  },
+  filePathRelative: "views/WaterMark.md",
 };
 
 if (import.meta.webpackHot) {
