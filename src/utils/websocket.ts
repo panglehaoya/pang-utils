@@ -1,6 +1,6 @@
-import { WSEvent } from "./event";
+import { Event } from "./event";
 
-const eventBus = new WSEvent();
+const eventBus = new Event();
 
 export class EnclosureWebSocket {
   private wsInstance: WebSocket | undefined;

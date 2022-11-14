@@ -75,7 +75,7 @@ export class WaterMark {
     const src = canvas.toDataURL("image/png");
     this.maskDiv.style.position = "absolute";
     this.maskDiv.style.zIndex = "9999";
-    this.maskDiv.id = uuid(10);
+    this.maskDiv.id = "mask";
     this.maskDiv.style.top = "20px";
     this.maskDiv.style.left = "0";
     this.maskDiv.style.width = "100%";

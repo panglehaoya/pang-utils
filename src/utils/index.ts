@@ -2,7 +2,7 @@ export { Event } from "@/utils/event";
 export { EnclosureWebSocket } from "@/utils/websocket";
 export { WaterMark } from "@/utils/water-mark";
 export { uuid } from "@/utils/uuid";
-export { dataURLtoBlob, urlToBase64 } from "@/utils/base64Conver";
+export { urlToBase64, dataURLtoBlob } from "@/utils/base64Convert";
 export {
   openWindow,
   downloadByBase64,
@@ -17,4 +17,10 @@ export {
   isObject,
   isEmpty,
 } from "@/utils/validate";
-export { formatToDate, formatToDateTime } from "@/utils/dateUtil";
+export {
+  formatToDate,
+  formatToDateTime,
+  handleDate,
+  getTimeDuration,
+} from "@/utils/dateUtil";
+export { treeToList, listToTree } from "@/utils/treeHelper";

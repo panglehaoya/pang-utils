@@ -1,4 +1,4 @@
-import { dataURLtoBlob, urlToBase64 } from "./base64Conver";
+import { dataURLtoBlob, urlToBase64 } from "./base64Convert";
 
 type TargetContext = "_self" | "_blank";
 

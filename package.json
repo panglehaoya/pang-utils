@@ -1,6 +1,6 @@
 {
   "name": "pang-utils",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "vue项目常用函数库",
   "author": "panglehaoya",
   "scripts": {
@@ -60,6 +60,8 @@
     "eslint-plugin-vue": "^8.0.3",
     "husky": "^7.0.4",
     "jest": "^27.0.5",
+    "jest-canvas-mock": "^2.4.0",
+    "jest-websocket-mock": "^2.4.0",
     "lint-staged": "^11.1.2",
     "prettier": "^2.4.1",
     "sass": "^1.32.7",
