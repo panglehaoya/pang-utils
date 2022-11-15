@@ -1,12 +1,12 @@
 {
   "name": "pang-utils",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "vue项目常用函数库",
   "author": "panglehaoya",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
+    "test:unit": "vue-cli-service test:unit --watchAll",
     "lint": "vue-cli-service lint",
     "lint:line-staged": "lint-staged -c ./.husky/lintstagedrc.js",
     "build:lib": "tsup",

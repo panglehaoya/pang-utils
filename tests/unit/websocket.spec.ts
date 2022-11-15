@@ -2,10 +2,6 @@ import { EnclosureWebSocket } from "../../src/utils";
 import WS from "jest-websocket-mock";
 
 describe("ws", () => {
-  afterEach(() => {
-    WS.clean();
-  });
-
   it("should connected", async () => {
     const server = new WS("ws://localhost:1234");
     const client = new EnclosureWebSocket("ws://localhost:1234");
@@ -18,15 +14,5 @@ describe("ws", () => {
     await client.sendMsg(sendData.event, sendData.data);
 
     expect(server).toReceiveMessage(JSON.stringify(sendData));
-  });
-
-  it("websocket close", async () => {
-    const server = new WS("ws://localhost:1234");
-    const client = new EnclosureWebSocket("ws://localhost:1234");
-    client.init();
-    await server.connected;
-    const res = await client.closeWS();
-
-    expect(res).toBe("close");
   });
 });

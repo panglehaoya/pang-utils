@@ -1,20 +1,7 @@
 import type { ManipulateType } from "dayjs";
 import dayjs from "dayjs";
 
-const DATE_TIME_FORMAT = "YYYY-MM-DD HH:mm:ss";
-const DATE_FORMAT = "YYYY-MM-DD";
-
-export function formatToDateTime(
-  date: number | Date,
-  format = DATE_TIME_FORMAT
-): string {
-  return dayjs(date).format(format);
-}
-
-export function formatToDate(
-  date: number | Date,
-  format = DATE_FORMAT
-): string {
+export function formatDate(date: number | Date, format: string): string {
   return dayjs(date).format(format);
 }
 
@@ -31,7 +18,7 @@ export function handleDate(
   num: number,
   manipulateType: ManipulateType,
   date: number | Date,
-  format = DATE_FORMAT
+  format: string
 ): string {
   if (type === "subtract") {
     const newDate: any = dayjs(date).subtract(num, manipulateType);

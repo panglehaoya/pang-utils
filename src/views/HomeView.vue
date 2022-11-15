@@ -3,12 +3,9 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted } from "vue";
-import { urlToBase64, dataURLtoBlob } from "@/utils";
-import { handleDate } from "@/utils";
-import dayjs from "dayjs";
-// const date = new Date(2022, 2, 2);
-// const dateAdd = handleDate("add", 1, "day", date);
-// console.log(dateAdd);
-console.log(dayjs(new Date(2022, 2, 2)).add(1, "day").$d);
+import { uuid } from "@/utils/uuid";
+import { formatDate } from "@/utils";
+
+console.log(uuid(8, 10));
+console.log(formatDate(Date.now(), "YYYY-MM-DD HH:MM"));
 </script>

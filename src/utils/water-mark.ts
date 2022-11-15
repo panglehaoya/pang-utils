@@ -1,5 +1,3 @@
-import { uuid } from "./uuid";
-
 export interface ISetWaterMarkConfig {
   text: string;
   fontSize?: number;
@@ -18,10 +16,6 @@ export interface ISetWaterMarkConfig {
    * 是否允许删除水印 默认为false
    */
   allowDelete?: boolean;
-  /**
-   * 是否监听容器变化
-   */
-  mutation?: boolean;
 }
 
 const defaultConfig: ISetWaterMarkConfig = {

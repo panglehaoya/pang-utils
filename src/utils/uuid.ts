@@ -3,7 +3,7 @@
  * @param len
  * @param radix
  */
-export function uuid(len: number, radix = 16) {
+export function uuid(radix = 16, len?: number) {
   const chars =
     "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".split("");
   const uuid = [];

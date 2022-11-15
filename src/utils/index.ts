@@ -14,13 +14,9 @@ export {
   validURL,
   validUpperCase,
   validLowerCase,
+  validAlphabets,
   isObject,
   isEmpty,
 } from "@/utils/validate";
-export {
-  formatToDate,
-  formatToDateTime,
-  handleDate,
-  getTimeDuration,
-} from "@/utils/dateUtil";
+export { formatDate, handleDate, getTimeDuration } from "@/utils/dateUtil";
 export { treeToList, listToTree } from "@/utils/treeHelper";

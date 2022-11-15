@@ -1,30 +1,18 @@
-import {
-  formatToDate,
-  formatToDateTime,
-  handleDate,
-  getTimeDuration,
-} from "../../src/utils";
+import { formatDate, handleDate, getTimeDuration } from "../../src/utils";
 
 describe("dateUtils", () => {
-  it("formatToDate", () => {
+  it("formatDate", () => {
     const date = new Date(2022, 1, 2);
-    const format = formatToDate(date, "YYYY-MM-DD");
+    const format = formatDate(date, "YYYY-MM-DD");
 
     expect(format).toBe("2022-02-02");
   });
 
-  it("formatToDateTime", () => {
-    const date = new Date(2022, 2, 2).getTime();
-    const format = formatToDateTime(date);
-
-    expect(format).toBe("2022-03-02 00:00:00");
-  });
-
   it("handleDate", () => {
     const date = new Date(2022, 2, 2);
-    const dateAdd = handleDate("add", 1, "day", date);
-    const dateSub = handleDate("subtract", 1, "day", date);
-
+    const dateAdd = handleDate("add", 1, "day", date, "YYYY-MM-DD");
+    const dateSub = handleDate("subtract", 1, "day", date, "YYYY-MM-DD");
+    console.log(dateAdd);
     expect(dateAdd).toBe("2022-03-03");
     expect(dateSub).toBe("2022-03-01");
   });

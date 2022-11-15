@@ -49,8 +49,8 @@ export function treeToList<T = any>(
   const { children } = config;
   const result: any = [...tree];
   for (let i = 0; i < result.length; i++) {
-    if (!result[i][children!]) continue;
-    result.splice(i + 1, 0, ...result[i][children!]);
+    if (!result[i][children]) continue;
+    result.splice(i + 1, 0, ...result[i][children]);
   }
   return result;
 }
@@ -65,7 +65,7 @@ export function findNode<T = any>(
   const list = [...tree];
   for (const node of list) {
     if (func(node)) return node;
-    node[children!] && list.push(...node[children!]);
+    node[children] && list.push(...node[children]);
   }
   return null;
 }
@@ -81,7 +81,7 @@ export function findNodeAll<T = any>(
   const result: T[] = [];
   for (const node of list) {
     func(node) && result.push(node);
-    node[children!] && list.push(...node[children!]);
+    node[children] && list.push(...node[children]);
   }
   return result;
 }
@@ -103,7 +103,7 @@ export function findPath<T = any>(
       list.shift();
     } else {
       visitedSet.add(node);
-      node[children!] && list.unshift(...node[children!]);
+      node[children] && list.unshift(...node[children]);
       path.push(node);
       if (func(node)) {
         return path;
@@ -131,7 +131,7 @@ export function findPathAll(
       list.shift();
     } else {
       visitedSet.add(node);
-      node[children!] && list.unshift(...node[children!]);
+      node[children] && list.unshift(...node[children]);
       path.push(node);
       func(node) && result.push([...path]);
     }
